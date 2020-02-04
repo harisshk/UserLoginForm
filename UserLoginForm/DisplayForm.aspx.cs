@@ -11,15 +11,15 @@ namespace UserLoginForm
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie cookie = Request.Cookies["UserDetails"];
-            if (cookie != null)
+            HttpCookie cookies = Request.Cookies["UserDetails"];
+            if (cookies != null)
             {
-                lblFirstName.Text = cookie["FirstName"];
-                lblLastName.Text = cookie["LastName"];
-                lblEmail.Text = cookie["Email"];
-                lblAddress.Text = cookie["Address"];
-                lblCity.Text = cookie["City"];
-                lblPinCode.Text = cookie["Pin Code"];
+                lblFirstName.Text = cookies["FirstName"];
+                lblLastName.Text = cookies["LastName"];
+                lblEmail.Text = cookies["Email"];
+                lblAddress.Text = cookies["Address"];
+                lblCity.Text = cookies["City"];
+                lblPinCode.Text = cookies["Pin Code"];
             }
         }
     }
